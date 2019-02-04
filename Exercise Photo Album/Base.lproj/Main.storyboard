@@ -1,24 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d4N-Tb-J3j">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Animal And Cities Table View Controller-->
+        <scene sceneID="8KK-0t-bXY">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="4fr-EQ-92w" customClass="AnimalAndCitiesTableViewController" customModule="Exercise_Photo_Album" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="UjK-2m-Km2">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="qYE-g9-7ZU">
+                                <rect key="frame" x="0.0" y="55.5" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qYE-g9-7ZU" id="pqQ-Dq-Vvg" customClass="CitiesCellTableViewCell" customModule="Exercise_Photo_Album" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="KDG-XC-0Vv" kind="show" identifier="showPhotoView" id="QIN-BX-DZa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4fr-EQ-92w" id="OCM-WM-oEC"/>
+                            <outlet property="delegate" destination="4fr-EQ-92w" id="5qh-mG-TO8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7Rr-xq-ALB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01E-s3-hKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="867.61619190404804" y="-514.39999999999998"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="C2I-iL-GcB">
+            <objects>
+                <viewController id="KDG-XC-0Vv" customClass="PhotoViewController" customModule="Exercise_Photo_Album" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJ0-J2-5Th">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M69-Ep-6vj">
+                                <rect key="frame" x="351.5" y="40" width="266.5" height="303"/>
+                            </mapView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IK8-yP-ZjO">
+                                <rect key="frame" x="47.5" y="40" width="267" height="303"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EC0-Nr-KYE" appends="YES" id="bDi-wL-Kt3"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IK8-yP-ZjO" firstAttribute="leading" secondItem="wWD-km-CUs" secondAttribute="leading" constant="47.5" id="5kB-oB-pVB"/>
+                            <constraint firstItem="M69-Ep-6vj" firstAttribute="top" secondItem="wWD-km-CUs" secondAttribute="top" constant="8" id="Xq4-f6-83R"/>
+                            <constraint firstItem="wWD-km-CUs" firstAttribute="bottom" secondItem="IK8-yP-ZjO" secondAttribute="bottom" constant="32" id="aPD-9Q-Awx"/>
+                            <constraint firstItem="wWD-km-CUs" firstAttribute="trailing" secondItem="M69-Ep-6vj" secondAttribute="trailing" constant="49" id="dsI-iM-GTa"/>
+                            <constraint firstItem="M69-Ep-6vj" firstAttribute="leading" secondItem="IK8-yP-ZjO" secondAttribute="trailing" constant="37" id="f6w-7F-VBo"/>
+                            <constraint firstItem="IK8-yP-ZjO" firstAttribute="width" secondItem="TJ0-J2-5Th" secondAttribute="width" multiplier="0.4" id="lhi-dU-uw6"/>
+                            <constraint firstItem="wWD-km-CUs" firstAttribute="bottom" secondItem="M69-Ep-6vj" secondAttribute="bottom" constant="32" id="ofJ-Zg-vF1"/>
+                            <constraint firstItem="IK8-yP-ZjO" firstAttribute="top" secondItem="wWD-km-CUs" secondAttribute="top" constant="8" id="w2r-oY-d6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wWD-km-CUs"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="M69-Ep-6vj" id="maF-Zu-z9W"/>
+                        <outlet property="photoView" destination="IK8-yP-ZjO" id="q2v-O7-SvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycB-gF-WmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="EC0-Nr-KYE">
+                    <connections>
+                        <action selector="changeFrameBackground:" destination="KDG-XC-0Vv" id="VC6-AX-KPk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="867.61619190404804" y="240.80000000000001"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ueT-mn-PaE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d4N-Tb-J3j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xJ9-Ps-AnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4fr-EQ-92w" kind="relationship" relationship="rootViewController" id="JeH-KB-CqK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSC-r2-tdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76.911544227886068" y="-514.39999999999998"/>
         </scene>
     </scenes>
 </document>

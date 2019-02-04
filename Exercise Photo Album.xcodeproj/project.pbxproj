@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5CDBB79D2204328C0014F6C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB79C2204328C0014F6C2 /* AppDelegate.swift */; };
-		5CDBB79F2204328C0014F6C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB79E2204328C0014F6C2 /* ViewController.swift */; };
 		5CDBB7A22204328C0014F6C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBB7A02204328C0014F6C2 /* Main.storyboard */; };
 		5CDBB7A42204328D0014F6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBB7A32204328D0014F6C2 /* Assets.xcassets */; };
 		5CDBB7A72204328D0014F6C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBB7A52204328D0014F6C2 /* LaunchScreen.storyboard */; };
 		5CDBB7B22204328D0014F6C2 /* Exercise_Photo_AlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB7B12204328D0014F6C2 /* Exercise_Photo_AlbumTests.swift */; };
 		5CDBB7BD2204328D0014F6C2 /* Exercise_Photo_AlbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB7BC2204328D0014F6C2 /* Exercise_Photo_AlbumUITests.swift */; };
+		5CDBB7CB220433000014F6C2 /* AnimalAndCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB7CA220433000014F6C2 /* AnimalAndCitiesTableViewController.swift */; };
+		5CDBB7CD220433630014F6C2 /* CitiesCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB7CC220433630014F6C2 /* CitiesCellTableViewCell.swift */; };
+		5CDBB7CF22043FEF0014F6C2 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB7CE22043FEF0014F6C2 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		5CDBB7992204328C0014F6C2 /* Exercise Photo Album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise Photo Album.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDBB79C2204328C0014F6C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CDBB79E2204328C0014F6C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CDBB7A12204328C0014F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CDBB7A32204328D0014F6C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CDBB7A62204328D0014F6C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		5CDBB7B82204328D0014F6C2 /* Exercise Photo AlbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Exercise Photo AlbumUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDBB7BC2204328D0014F6C2 /* Exercise_Photo_AlbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise_Photo_AlbumUITests.swift; sourceTree = "<group>"; };
 		5CDBB7BE2204328D0014F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CDBB7CA220433000014F6C2 /* AnimalAndCitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAndCitiesTableViewController.swift; sourceTree = "<group>"; };
+		5CDBB7CC220433630014F6C2 /* CitiesCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCellTableViewCell.swift; sourceTree = "<group>"; };
+		5CDBB7CE22043FEF0014F6C2 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		5CDBB7902204328C0014F6C2 = {
 			isa = PBXGroup;
 			children = (
+				5CDBB7CC220433630014F6C2 /* CitiesCellTableViewCell.swift */,
 				5CDBB79B2204328C0014F6C2 /* Exercise Photo Album */,
 				5CDBB7B02204328D0014F6C2 /* Exercise Photo AlbumTests */,
 				5CDBB7BB2204328D0014F6C2 /* Exercise Photo AlbumUITests */,
@@ -98,11 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				5CDBB79C2204328C0014F6C2 /* AppDelegate.swift */,
-				5CDBB79E2204328C0014F6C2 /* ViewController.swift */,
 				5CDBB7A02204328C0014F6C2 /* Main.storyboard */,
 				5CDBB7A32204328D0014F6C2 /* Assets.xcassets */,
 				5CDBB7A52204328D0014F6C2 /* LaunchScreen.storyboard */,
 				5CDBB7A82204328D0014F6C2 /* Info.plist */,
+				5CDBB7CA220433000014F6C2 /* AnimalAndCitiesTableViewController.swift */,
+				5CDBB7CE22043FEF0014F6C2 /* PhotoViewController.swift */,
 			);
 			path = "Exercise Photo Album";
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CDBB79F2204328C0014F6C2 /* ViewController.swift in Sources */,
+				5CDBB7CD220433630014F6C2 /* CitiesCellTableViewCell.swift in Sources */,
+				5CDBB7CF22043FEF0014F6C2 /* PhotoViewController.swift in Sources */,
+				5CDBB7CB220433000014F6C2 /* AnimalAndCitiesTableViewController.swift in Sources */,
 				5CDBB79D2204328C0014F6C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
